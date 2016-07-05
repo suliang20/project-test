@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>DOM 基础</title>
+	<script type="text/javascript">
+		function findDiv(){
+			var div=document.getElementById('myDiv');
+			alert(div);
+		}
+	</script>
+</head>
+<body>
+	<div id="myDiv">
+		<p>p 标签1</p>
+	</div>
+	<p>p 标签2</p>
+	<button onclick="findDiv()">访问Div标签</button>
+</body>
+</html>

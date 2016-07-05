@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf=8">
+	<title>with</title>
+	<style type="text/css">
+		.myDiv{
+			width: 100px;
+			height: 100px;
+			background-color: #00ff00;
+		}
+	</style>
+</head>
+<body>
+	<div id="myDiv"></div>
+	<button onclick="doIt()">修改</button>
+	
+	<script type="text/javascript">
+function doIt(){
+	with(myDiv){
+		id="newId";
+		className="myDiv";
+	}
+}
+</script>
+</body>
+</html>

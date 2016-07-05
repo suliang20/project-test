@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<!-- <script type="text/javascript" src="DumpTest.js"></script>
+-->
+<title></title>
+</head>
+<body>
+<div id="myDiv">
+	<p>我来问道无余说。</p>
+	<p>云在表天水在瓶。</p>
+</div>
+<button onclick="testDump()">测试dump</button>
+</body>
+<script type="text/javascript">
+function dump(obj){
+	var win=window.open('','dump','');
+	var temp=[];
+	// var temp = new Array();
+	for(var p in obj){
+		temp.push(p);
+	}
+	temp.sort();
+
+	var str="<table border=1>";
+	for(var i=0;i<temp.length;i++){
+		str += "<tr><td>"+temp[i]+"</td><td>"+obj[temp[i]]+"</td></tr>";
+	}
+	str += "</table>";
+	win.document.body.innerHTML=str;
+}
+
+function testDump(){
+	var div=document.getElementById('myDiv');
+	dump(div);
+}
+</script>
+</html>
